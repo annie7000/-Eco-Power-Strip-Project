@@ -24,7 +24,7 @@ void setup() { // put your setup code here, to run once:
 
   lcd_1.begin(16,3); // sets up the amount of columns and rows on the display
 
-  lcd_1.print("hello world"); 
+  lcd_1.print("hello world"); // test
 }
 
 void loop() {
