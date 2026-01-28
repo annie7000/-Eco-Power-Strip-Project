@@ -1,8 +1,12 @@
 /* from passion-tech on git link: https://github.com/passion-tech/Hello-tech/blob/master/Esp8266_wifi_Connet_With_Arduino.ino
 
 circuit:
-
-
+esp 3.3v to 3.3v
+esp EN to 3.3v
+esp TX to D2
+esp RX to D3
+esp GND to GND
+esp I00 and I02 no connections
 
 */
 #include <SoftwareSerial.h>
