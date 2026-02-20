@@ -1,5 +1,6 @@
 - wifi connection
 - lcd dislay the power consmption
 - analog to digital conversion
-- relays only act as a switch, the blog only showcases a powerstrip with the ability to turn on and off, not monitor power
-- will need current transformer (ct) sensor to monitor power consumption
+- program relay to turn on an off with input from mobile app
+- get ct sensor to sense the power usage, won't do it for individual outlets just the entire unit
+- 
