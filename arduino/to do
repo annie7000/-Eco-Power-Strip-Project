@@ -1,3 +1,4 @@
 - wifi connection
 - lcd dislay the power consmption
 - analog to digital conversion
+- relays only act as a switch, the blog only showcases a powerstrip with the ability to turn on and off, not monitor power
