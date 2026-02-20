@@ -1,7 +1,5 @@
 - wifi connection ESP8266 board
 - lcd dislay the power consmption
-- analog to digital conversion
 - program relay to turn on an off with input from mobile app
-- get ct sensor to sense the power usage, won't do it for individual outlets just the entire unit
 - figure out how to power the arduino with ac voltage from wall, need ac-dc converter
 - 
