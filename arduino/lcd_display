@@ -1,15 +1,15 @@
 /* code to display the analog voltage input from arduino to LCD screen, 3 rows of input display
 
 circuit:
-  - LCD D4 to digital pin 5
-  - LCD D5 to digital pin 4
-  - LCD D6 to digital pin 3
-  - LCD D7 to digital pin 2
+  - LCD D4 to digital pin 26
+  - LCD D5 to digital pin 28
+  - LCD D6 to digital pin 30
+  - LCD D7 to digital pin 32
   - LCD A to 5v input
   - LCD K to ground
-  - LCD E to digital pin 11
+  - LCD E to digital pin 24
   - LCD RW to ground
-  - LCD RS to digital pin 12
+  - LCD RS to digital pin 22
   - LCD VO to output of potentiometer (this will control the brightness of the display)
   - LCD VDD to 5v input
   - LCD VSS to ground
@@ -18,17 +18,50 @@ circuit:
 
 #include <LiquidCrystal.h>
 
-LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2); // the pins the LCD is connected to
+LiquidCrystal lcd_1(22, 24, 26, 28, 30, 32); // the pins the LCD is connected to
 
 void setup() { // put your setup code here, to run once:
 
-  lcd_1.begin(16,3); // sets up the amount of columns and rows on the display
+  lcd_1.begin(16, 2); // sets up the amount of columns and rows on the display
 
-  lcd_1.print("hello world"); // test
+  lcd_1.print("LCD ready");
+  delay(1900);
+  lcd_1.clear();
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  
+  // Read analog values (example - you'll need to connect something to these pins)
+  int sensor1 = analogRead(A0);
+  int sensor2 = analogRead(A1);
+  int sensor3 = analogRead(A2);
+  
+  // Display first sensor value on row 0
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("S1: ");
+  lcd_1.print(sensor1);
+  lcd_1.print("   "); // Add spaces to clear any previous characters
+  
+  // Display second sensor value on row 1
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("S2: ");
+  lcd_1.print(sensor2);
+  lcd_1.print("   ");
+  
+  // If you have a 16x4 LCD, uncomment these lines for rows 2 and 3
+  /*
+  lcd_1.setCursor(0, 2);
+  lcd_1.print("S3: ");
+  lcd_1.print(sensor3);
+  lcd_1.print("   ");
+  
+  lcd_1.setCursor(0, 3);
+  lcd_1.print("Total: ");
+  lcd_1.print(sensor1 + sensor2 + sensor3);
+  lcd_1.print("   ");
+  */
+  
+  delay(500); 
 
 }
