@@ -1,8 +1,14 @@
-/*------------------------------------------*/
-// NOTES
-// will need to modify to eventually accept on 
-// and off signal from mobile app
-/*------------------------------------------*/
+/*------------------------------------------*
+ NOTES
+ will need to modify to eventually accept on 
+ and off signal from mobile app
+
+circuit 
+pins 5 - 12 are connected to relays
+relay gnd to ground
+relay vcc to 5v power
+
+*------------------------------------------*/
 
 String message = "";
 char c_data;
