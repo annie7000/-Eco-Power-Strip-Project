@@ -8,6 +8,10 @@ pins 5 - 12 are connected to relays
 relay gnd to ground
 relay vcc to 5v power
 
+will eventually have to swtich the input from 
+arduino serial monitor to app input, figure out 
+after wifi connection is figured out
+
 *------------------------------------------*/
 
 String message = "";
