@@ -14,7 +14,8 @@ circuit:
   - LCD VDD to 5v input
   - LCD VSS to ground
 
-*/
+doesn't work well yet, will have to fix before combining with the rest of the code
+*-------------------------------------------------------------------------------------------*/
 
 #include <LiquidCrystal.h>
 
