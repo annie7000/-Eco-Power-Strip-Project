@@ -1,5 +1,0 @@
-- wifi connection ESP8266 board
-- lcd dislay the power consmption
-- program relay to turn on an off with input from mobile app
-- figure out how to power the arduino with ac voltage from wall, need ac-dc converter
-- 
