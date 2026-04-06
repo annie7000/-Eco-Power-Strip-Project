@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "294010875156",
+    "project_id": "electricityapp-7fd1d",
+    "storage_bucket": "electricityapp-7fd1d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294010875156:android:9dcc1161f108171fa76601",
+        "android_client_info": {
+          "package_name": "com.example.powersync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Z96vqFMeuHmkigr7_whM9Ohw0T4IEws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

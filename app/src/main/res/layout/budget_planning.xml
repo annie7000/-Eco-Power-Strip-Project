@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_background"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back Button"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/connected_banner"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/budget_plan" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_budget_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/square_border"
+        android:gravity="center"
+        android:hint="Enter your budget"
+        android:inputType="numberDecimal"
+        android:textColorHint="#808080" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/txt_currently_using"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• You are using ____________"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txt_should_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="• You should use ____________"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/txt_total_month"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/square_border"
+        android:gravity="center"
+        android:text="$0.00"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Total amount this month"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
