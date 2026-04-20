@@ -1,0 +1,3 @@
+[submodule "arduino.js"]
+	path = arduino.js
+	url = https://github.com/annie7000/arduino.js.git
