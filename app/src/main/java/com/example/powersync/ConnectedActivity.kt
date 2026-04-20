@@ -1,15 +1,21 @@
 package com.example.powersync
 
+// changes made by annie 4/7/2026
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.google.firebase.database.FirebaseDatabase
 
 class ConnectedActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val db = FirebaseDatabase.getInstance().getReference("commands")
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.device_connected) // Matches device_connected.xml
 
@@ -27,13 +33,16 @@ class ConnectedActivity : ComponentActivity() {
             finish()
         }
 
-        // 4. "Turn Off" logic
+        // 4. "ON/OFF" logic
         turnOffButton.setOnClickListener {
-            // Here you would send a command to your power strip/Firebase
-            Toast.makeText(this, "${deviceNameDisplay.text} turned off", Toast.LENGTH_SHORT).show()
 
-            val shouldTurnOn = turnOffButton.text.toString().equals("Turn Off", ignoreCase = true)
-            turnOffButton.text = if (shouldTurnOn) "Turn On" else "Turn Off"
+            val isTurningOff = turnOffButton.text.toString().equals("Turn Off", true)
+            val newState = if (isTurningOff) "OFF" else "ON"
+
+            db.child("relay1").setValue(newState) // send button state over to firebase
+
+            Toast.makeText(this, "Relay set to $newState", Toast.LENGTH_SHORT).show()
+            turnOffButton.text = if (isTurningOff) "Turn On" else "Turn Off"
         }
     }
 }
